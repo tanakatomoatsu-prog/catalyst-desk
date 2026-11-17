@@ -1,0 +1,47 @@
+v22.23.4
+FAIL  spx          ^GSPC HTTP 429 Too Many Requests 
+FAIL  ndx          ^NDX HTTP 429 Too Many Requests 
+FAIL  rut          ^RUT HTTP 429 Too Many Requests 
+FAIL  sox          ^SOX HTTP 429 Too Many Requests 
+FAIL  nikkei       ^N225 HTTP 429 Too Many Requests 
+FAIL  topix        1306.T HTTP 429 Too Many Requests 
+FAIL  jp_banks     1615.T HTTP 429 Too Many Requests 
+FAIL  jp_growth    2516.T HTTP 429 Too Many Requests 
+FAIL  jp_reit      1343.T HTTP 429 Too Many Requests 
+FAIL  eem          EEM HTTP 429 Too Many Requests 
+FAIL  emxc         EMXC HTTP 429 Too Many Requests 
+FAIL  kospi        ^KS11 HTTP 429 Too Many Requests 
+FAIL  taiex        ^TWII HTTP 429 Too Many Requests 
+FAIL  hsi          ^HSI HTTP 429 Too Many Requests 
+FAIL  csi300       000300.SS HTTP 429 Too Many Requests 
+FAIL  nifty        ^NSEI HTTP 429 Too Many Requests 
+FAIL  bovespa      ^BVSP HTTP 429 Too Many Requests 
+FAIL  acwi         ACWI HTTP 429 Too Many Requests 
+FAIL  stoxx        ^STOXX HTTP 429 Too Many Requests 
+FAIL  gold         GC=F HTTP 429 Too Many Requests 
+FAIL  silver       SI=F HTTP 429 Too Many Requests 
+FAIL  wti          CL=F HTTP 429 Too Many Requests 
+FAIL  copper       HG=F HTTP 429 Too Many Requests 
+FAIL  ief          IEF HTTP 429 Too Many Requests 
+FAIL  tlt          TLT HTTP 429 Too Many Requests 
+FAIL  tip          TIP HTTP 429 Too Many Requests 
+FAIL  agg          AGG HTTP 429 Too Many Requests 
+FAIL  lqd          LQD HTTP 429 Too Many Requests 
+FAIL  hyg          HYG HTTP 429 Too Many Requests 
+FAIL  emb          EMB HTTP 429 Too Many Requests 
+FAIL  emlc         EMLC HTTP 429 Too Many Requests 
+FAIL  jgb_etf      2510.T HTTP 429 Too Many Requests 
+FAIL  us2y         DGS2 The operation was aborted due to timeout
+FAIL  us10y        DGS10 The operation was aborted due to timeout
+FAIL  us30y        DGS30 The operation was aborted due to timeout
+FAIL  jgb2y        2Y HTTP 404 <!DOCTYPE html> <html lang="ja"> <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns
+FAIL  jgb10y       10Y HTTP 404 <!DOCTYPE html> <html lang="ja"> <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns
+FAIL  jgb30y       30Y HTTP 404 <!DOCTYPE html> <html lang="ja"> <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns
+FAIL  us_ig_oas    BAMLC0A0CM The operation was aborted due to timeout
+FAIL  us_hy_oas    BAMLH0A0HYM2 The operation was aborted due to timeout
+FAIL  em_oas       BAMLEMCBPIOAS The operation was aborted due to timeout
+FAIL  usdjpy       JPY=X HTTP 429 Too Many Requests 
+FAIL  dxy          DX-Y.NYB HTTP 429 Too Many Requests 
+FAIL  eurusd       EURUSD=X HTTP 429 Too Many Requests 
+FAIL  usdcnh       CNH=X HTTP 429 Too Many Requests 
+Every source failed; leaving prices.json untouched.
