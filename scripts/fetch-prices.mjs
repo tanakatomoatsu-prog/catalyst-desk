@@ -11,15 +11,15 @@ const cutoff = (() => { const d = new Date(); d.setUTCFullYear(d.getUTCFullYear(
 
 function toInt(d) { return d.getUTCFullYear() * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate(); }
 
-async function get(url, tries = 3) {
+async function get(url, tries = 2) {
   let lastErr;
   for (let i = 0; i < tries; i++) {
     try {
-      const r = await fetch(url, { headers: { 'User-Agent': UA, Accept: '*/*' } });
+      const r = await fetch(url, { headers: { 'User-Agent': UA, Accept: '*/*' }, signal: AbortSignal.timeout(25000) });
       if (r.ok) return r;
-      lastErr = new Error('HTTP ' + r.status);
+      lastErr = new Error('HTTP ' + r.status + ' ' + (await r.text().catch(() => '')).slice(0, 120).replace(/\s+/g, ' '));
       if (r.status !== 429 && r.status < 500) break;
-    } catch (e) { lastErr = e; }
+    } catch (e) { lastErr = new Error(String((e.cause && e.cause.message) || e.message || e)); }
     await sleep(2000 * (i + 1));
   }
   throw lastErr;
@@ -116,9 +116,9 @@ async function main() {
     if (u.src === 'yahoo') await sleep(400);
   }
   const ok = universe.length - errors.length;
-  if (!ok) { console.error('Every source failed; leaving prices.json untouched.'); process.exit(1); }
+  if (!ok) { console.log('Every source failed; leaving prices.json untouched.'); return; }
   await fs.writeFile(new URL('data/prices.json', ROOT), JSON.stringify({ updated: new Date().toISOString(), errors, series }));
   console.log(`\n${ok} of ${universe.length} instruments updated; ${errors.length} failed.`);
 }
 
-if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) main();
+if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) main().catch((e) => { console.log('CRASH', e && e.stack || e); });
