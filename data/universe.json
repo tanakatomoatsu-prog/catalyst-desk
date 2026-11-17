@@ -1,0 +1,54 @@
+[
+  {"id":"spx","name":"S&P 500","short":"S&P 500","group":"US equity","kind":"price","src":"yahoo","symbol":"^GSPC"},
+  {"id":"ndx","name":"Nasdaq 100","short":"Nasdaq 100","group":"US equity","kind":"price","src":"yahoo","symbol":"^NDX"},
+  {"id":"rut","name":"Russell 2000","short":"Russell 2000","group":"US equity","kind":"price","src":"yahoo","symbol":"^RUT"},
+  {"id":"sox","name":"PHLX Semiconductor index","short":"SOX semis","group":"US equity","kind":"price","src":"yahoo","symbol":"^SOX"},
+
+  {"id":"nikkei","name":"Nikkei 225","short":"Nikkei 225","group":"Japan equity","kind":"price","src":"yahoo","symbol":"^N225"},
+  {"id":"topix","name":"TOPIX (NEXT FUNDS TOPIX ETF, 1306)","short":"TOPIX","group":"Japan equity","kind":"price","src":"yahoo","symbol":"1306.T","adj":true},
+  {"id":"jp_banks","name":"TOPIX Banks (NEXT FUNDS ETF, 1615)","short":"JP banks","group":"Japan equity","kind":"price","src":"yahoo","symbol":"1615.T","adj":true},
+  {"id":"jp_growth","name":"TSE Growth 250 (NEXT FUNDS ETF, 2516)","short":"TSE Growth","group":"Japan equity","kind":"price","src":"yahoo","symbol":"2516.T","adj":true},
+  {"id":"jp_reit","name":"TSE REIT index (NEXT FUNDS ETF, 1343)","short":"J-REIT","group":"Japan equity","kind":"price","src":"yahoo","symbol":"1343.T","adj":true},
+
+  {"id":"eem","name":"MSCI Emerging Markets (iShares EEM)","short":"MSCI EM","group":"EM and Asia","kind":"price","src":"yahoo","symbol":"EEM","adj":true},
+  {"id":"emxc","name":"MSCI EM ex China (iShares EMXC)","short":"EM ex-China","group":"EM and Asia","kind":"price","src":"yahoo","symbol":"EMXC","adj":true},
+  {"id":"kospi","name":"KOSPI","short":"KOSPI","group":"EM and Asia","kind":"price","src":"yahoo","symbol":"^KS11"},
+  {"id":"taiex","name":"Taiwan TAIEX","short":"TAIEX","group":"EM and Asia","kind":"price","src":"yahoo","symbol":"^TWII"},
+  {"id":"hsi","name":"Hang Seng","short":"Hang Seng","group":"EM and Asia","kind":"price","src":"yahoo","symbol":"^HSI"},
+  {"id":"csi300","name":"CSI 300","short":"CSI 300","group":"EM and Asia","kind":"price","src":"yahoo","symbol":"000300.SS"},
+  {"id":"nifty","name":"Nifty 50","short":"Nifty 50","group":"EM and Asia","kind":"price","src":"yahoo","symbol":"^NSEI"},
+  {"id":"bovespa","name":"Bovespa","short":"Bovespa","group":"EM and Asia","kind":"price","src":"yahoo","symbol":"^BVSP"},
+
+  {"id":"acwi","name":"MSCI ACWI (iShares ACWI)","short":"MSCI ACWI","group":"Global and Europe","kind":"price","src":"yahoo","symbol":"ACWI","adj":true},
+  {"id":"stoxx","name":"STOXX Europe 600","short":"STOXX 600","group":"Global and Europe","kind":"price","src":"yahoo","symbol":"^STOXX"},
+
+  {"id":"gold","name":"Gold futures, USD/oz","short":"Gold","group":"Gold and commodities","kind":"price","src":"yahoo","symbol":"GC=F"},
+  {"id":"silver","name":"Silver futures, USD/oz","short":"Silver","group":"Gold and commodities","kind":"price","src":"yahoo","symbol":"SI=F"},
+  {"id":"wti","name":"WTI crude futures","short":"WTI crude","group":"Gold and commodities","kind":"price","src":"yahoo","symbol":"CL=F"},
+  {"id":"copper","name":"Copper futures","short":"Copper","group":"Gold and commodities","kind":"price","src":"yahoo","symbol":"HG=F"},
+
+  {"id":"ief","name":"US Treasuries 7-10y (iShares IEF)","short":"UST 7-10y","group":"Fixed income, total return","kind":"price","src":"yahoo","symbol":"IEF","adj":true},
+  {"id":"tlt","name":"US Treasuries 20y+ (iShares TLT)","short":"UST 20y+","group":"Fixed income, total return","kind":"price","src":"yahoo","symbol":"TLT","adj":true},
+  {"id":"tip","name":"US TIPS (iShares TIP)","short":"US TIPS","group":"Fixed income, total return","kind":"price","src":"yahoo","symbol":"TIP","adj":true},
+  {"id":"agg","name":"US Aggregate (iShares AGG)","short":"US Agg","group":"Fixed income, total return","kind":"price","src":"yahoo","symbol":"AGG","adj":true},
+  {"id":"lqd","name":"US investment grade credit (iShares LQD)","short":"US IG","group":"Fixed income, total return","kind":"price","src":"yahoo","symbol":"LQD","adj":true},
+  {"id":"hyg","name":"US high yield (iShares HYG)","short":"US HY","group":"Fixed income, total return","kind":"price","src":"yahoo","symbol":"HYG","adj":true},
+  {"id":"emb","name":"EM USD sovereigns (iShares EMB)","short":"EM USD debt","group":"Fixed income, total return","kind":"price","src":"yahoo","symbol":"EMB","adj":true},
+  {"id":"emlc","name":"EM local currency debt (VanEck EMLC)","short":"EM local debt","group":"Fixed income, total return","kind":"price","src":"yahoo","symbol":"EMLC","adj":true},
+  {"id":"jgb_etf","name":"Japanese bonds, NOMURA-BPI (NEXT FUNDS ETF, 2510)","short":"JP bonds","group":"Fixed income, total return","kind":"price","src":"yahoo","symbol":"2510.T","adj":true},
+
+  {"id":"us2y","name":"US Treasury 2-year yield","short":"UST 2y","group":"Yields and spreads","kind":"yield","src":"fred","symbol":"DGS2"},
+  {"id":"us10y","name":"US Treasury 10-year yield","short":"UST 10y","group":"Yields and spreads","kind":"yield","src":"fred","symbol":"DGS10"},
+  {"id":"us30y","name":"US Treasury 30-year yield","short":"UST 30y","group":"Yields and spreads","kind":"yield","src":"fred","symbol":"DGS30"},
+  {"id":"jgb2y","name":"JGB 2-year yield","short":"JGB 2y","group":"Yields and spreads","kind":"yield","src":"mof","symbol":"2Y"},
+  {"id":"jgb10y","name":"JGB 10-year yield","short":"JGB 10y","group":"Yields and spreads","kind":"yield","src":"mof","symbol":"10Y"},
+  {"id":"jgb30y","name":"JGB 30-year yield","short":"JGB 30y","group":"Yields and spreads","kind":"yield","src":"mof","symbol":"30Y"},
+  {"id":"us_ig_oas","name":"US IG credit spread (ICE BofA OAS)","short":"US IG spread","group":"Yields and spreads","kind":"yield","src":"fred","symbol":"BAMLC0A0CM"},
+  {"id":"us_hy_oas","name":"US HY credit spread (ICE BofA OAS)","short":"US HY spread","group":"Yields and spreads","kind":"yield","src":"fred","symbol":"BAMLH0A0HYM2"},
+  {"id":"em_oas","name":"EM corporate spread (ICE BofA OAS)","short":"EM corp spread","group":"Yields and spreads","kind":"yield","src":"fred","symbol":"BAMLEMCBPIOAS"},
+
+  {"id":"usdjpy","name":"USD/JPY","short":"USD/JPY","group":"FX","kind":"price","src":"yahoo","symbol":"JPY=X"},
+  {"id":"dxy","name":"US dollar index","short":"Dollar index","group":"FX","kind":"price","src":"yahoo","symbol":"DX-Y.NYB"},
+  {"id":"eurusd","name":"EUR/USD","short":"EUR/USD","group":"FX","kind":"price","src":"yahoo","symbol":"EURUSD=X"},
+  {"id":"usdcnh","name":"USD/CNH","short":"USD/CNH","group":"FX","kind":"price","src":"yahoo","symbol":"CNH=X"}
+]

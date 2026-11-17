@@ -1,0 +1,44 @@
+name: Update prices
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['data/universe.json', 'scripts/fetch-prices.mjs']
+  schedule:
+    # Times are UTC. 07:25 = 16:25 JST (after the Tokyo close)
+    - cron: '25 7 * * 1-5'
+    # 22:40 = 07:40 JST next day (after the US close)
+    - cron: '40 22 * * 1-5'
+    # 00:50 = 09:50 JST (after the Ministry of Finance posts JGB yields)
+    - cron: '50 0 * * 2-6'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-prices
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch prices
+        run: node scripts/fetch-prices.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/prices.json
+          if git diff --cached --quiet; then
+            echo "No change."
+          else
+            git commit -m "Update prices"
+            git pull --rebase
+            git push
+          fi
